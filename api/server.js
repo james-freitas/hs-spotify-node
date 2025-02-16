@@ -1,9 +1,12 @@
 // API significa Application Programming Interface
 import express from "express";
+import cors from "cors";
 import { db } from "./connect.js";
 
 const app = express();
 const PORT = 3000;
+
+app.use(cors());
 
 app.get("/", (request, response) => {
   response.send("Helllo");
