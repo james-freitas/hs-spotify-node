@@ -4,7 +4,7 @@ Node API REST about songs and artists
 
 ## ✔️ Requirements
 
-- Docker
+- Node 21
 
 ## 🍔 Stack
 
@@ -15,11 +15,19 @@ Node API REST about songs and artists
 
 1. Access https://www.mongodb.com/
 
-## ✈️ How to run locally
+## ✈️ Setup the application
 
 1. Run `npm install`
 
-1. Setup `.env`
+2. Setup `.env`
    `DATABASE_URL=<mongo_connection_string`
 
-1. Access http://localhost:3000 and test the `/artists` and `/songs` endpoints
+## ✈️ How to run locally
+
+1. Run the application
+   `node --env-file=.env --watch  ./api/server.js`
+
+2. Test accessing the following endpoints
+
+- `curl http://localhost:3000/artists`
+- `curl http://localhost:3000/songs`
